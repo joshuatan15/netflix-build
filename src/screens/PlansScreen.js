@@ -47,9 +47,6 @@ function PlansScreen() {
       });
   }, []);
 
-  console.log(products, "--product---");
-  console.log(subscription, "--subscription---");
-
   const loadCheckout = async (priceId) => {
     const docRef = await db
       .collection("customers")
@@ -72,7 +69,7 @@ function PlansScreen() {
       if (sessionId) {
         // we have a session, let's redirect to checkout
         const stripe = await loadStripe(
-          "pk_test_51MExjLBXpaqbKSLRcWXHQACYlFYW1ZgrGZ0hH4CegrOXuxCKKwEvfIsj5bp7Tzil4ByZdpMV6nKYkQZf6lIJgnDZ00zvg7URfT"
+          process.env.REACT_APP_STRIPE_PUBLIC_KEY
         );
         stripe.redirectToCheckout({ sessionId });
       }
