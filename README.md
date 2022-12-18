@@ -14,6 +14,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `npm run build && firebase deploy`
+To deploy the code to firebase, run the above command. But the prerequisite is the login into firebase from ur terminal
+
+### `4242 4242 4242 4242`
+the above is the sample visa card for checkout in stripe
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
